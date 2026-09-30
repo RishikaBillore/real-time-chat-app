@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Real-Time Chat</h1>
+    <p class="subtitle">Spring Boot + WebSocket + STOMP + H2</p>
+
+    <div class="join-row">
+        <input id="username" maxlength="40" placeholder="Enter your name">
+        <button id="connect">Connect</button>
+        <button id="disconnect" disabled>Disconnect</button>
+    </div>
+
+    <div id="status" class="status">Disconnected</div>
+
+    <div id="messages" class="messages"></div>
+
+    <form id="message-form">
+        <input id="message" maxlength="500" placeholder="Type a message..." autocomplete="off" disabled>
+        <button id="send" disabled>Send</button>
+    </form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.6.1/dist/sockjs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
